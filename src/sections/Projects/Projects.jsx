@@ -16,16 +16,14 @@ function Projects() {
           link={"https://github.com/Mael-221/Boat-Type-Classification-Challenge"}
           title={"Boat Classification"}
           description={"Machine learning model for classifying boat types using Kaggle competition data."}
-          technologies={"Python, TensorFlow, OpenCV"}
-          role={"Lead Developer"}
+          technologies={"Python, TensorFlow, Keras"}
         />
         <ProjectCard 
           src={harmonyland} 
           link={"https://github.com/Mael-221/HarmonyLand"}
           title={"HarmonyLand"}
           description={"Drone Surveillance System for real-time monitoring and threat detection."}
-          technologies={"Python, OpenCV, DJI SDK"}
-          role={"Lead Developer"}
+          technologies={"Scala, Apache Kafka, Apache Spark, Hadoop, AWS"}
         />
         <ProjectCard 
           src={outlier} 
@@ -33,15 +31,13 @@ function Projects() {
           title={"ML for Cybersecurity"}
           description={"AI to identify cyber attack patterns and anomalies."}
           technologies={"Python, Scikit-learn, TensorFlow"}
-          role={"Data Scientist"}
         />
         <ProjectCard 
           src={food} 
           link={"https://github.com/Mael-221/Restaurant-Recommender-System"}
           title={"Restaurant Recommendation"}
           description={"Recommender system for restaurant recommendations based on user preferences and reviews."}
-          technologies={"Python, Flask, React"}
-          role={"Full Stack Developer"}
+          technologies={"Python, Pandas, Scikit-learn"}
         />
       </div>
     </section>
