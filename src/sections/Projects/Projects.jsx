@@ -26,13 +26,13 @@ function Projects() {
             <ProjectCard 
             src={outlier} 
             link={"https://github.com/Mael-221/ML-for-cybersecurity"}
-            title={"Machine Learning for Cybersecurity"}
+            title={"ML for Cybersecurity"}
             description={"Use AI to identify cyber attack"}/>
             <ProjectCard 
             src={food} 
             link={"https://github.com/Mael-221/Restaurant-Recommender-System"}
-            title={"Personalized Food Recommendation System"}
-            description={"System that provides personalized food recommendations for users"}/>
+            title={" Restaurant Recommendation"}
+            description={"Restaurant recommendations for users"}/>
         </div>
     </section>
   )
