@@ -1,41 +1,53 @@
-import styles from './SkillsStyles.module.css'
-import checkMarkDark from '../../assets/checkmark-dark.svg'
-import checkMarkLight from '../../assets/checkmark-light.svg'
-import SkillList from '../../common/SkillList'
-import {useTheme} from '../../common/ThemeContext'
+import styles from './SkillsStyles.module.css';
+import pythonIcon from '../../assets/python-icon.svg';
+import rIcon from '../../assets/r-icon.svg';
+import sqlIcon from '../../assets/sql-icon.png';
+import cppIcon from '../../assets/cpp-icon.svg';
+import javaIcon from '../../assets/java-icon.svg';
+import dataVizIcon from '../../assets/plot.png';
+import mlIcon from '../../assets/machine-learning.gif';
+import dlIcon from '../../assets/deep-learning-icon.png';
+import nlpLight from '../../assets/nlp-light.png';
+import nlpDark from '../../assets/nlp-dark.png';
+import huggingIcon from '../../assets/icons8-hugging-face.svg';
+import hadoopIcon from '../../assets/icons8-hadoop-distributed-file-system.svg';
+import awsIcon from '../../assets/aws-icon.svg';
+import sparkIcon from '../../assets/spark-icon.jpeg';
+import kafkaIcon from '../../assets/apache-kafka-icon.png';
+import { useTheme } from '../../common/ThemeContext';
+
 
 function Skills() {
   const {theme, toggleTheme} = useTheme();
-  const checkMarkIcon = theme === 'light' ? checkMarkLight : checkMarkDark;  
+  const skillsData = [
+    { icon: pythonIcon, title: 'Python' },
+    { icon: rIcon, title: 'R' },
+    { icon: sqlIcon, title: 'SQL' },
+    { icon: cppIcon, title: 'C++' },
+    { icon: javaIcon, title: 'Java' },
+    { icon: dataVizIcon, title: 'Data Visualization' },
+    { icon: mlIcon, title: 'Machine Learning' },
+    { icon: dlIcon, title: 'Deep Learning' },
+    { icon: theme === 'light' ? nlpLight : nlpDark, title: 'NLP' },
+    { icon: huggingIcon, title: 'Hugging Face' },
+    { icon: hadoopIcon, title: 'Hadoop' },
+    { icon: awsIcon, title: 'AWS' },
+    { icon: sparkIcon, title: 'Spark' },
+    { icon: kafkaIcon, title: 'Kafka' },
+  ];
   return (
-    <section 
-    id='skills'
-    className={styles.container}>
-    <h1 className="sectionTitle">Skills</h1>
-    <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill='Python'/>
-        <SkillList src={checkMarkIcon} skill='R'/>
-        <SkillList src={checkMarkIcon} skill='SQL'/>
-        <SkillList src={checkMarkIcon} skill='C++'/>
-        <SkillList src={checkMarkIcon} skill='Java'/>
-    </div>
-    <hr/>
-    <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill='Data Visualization'/>
-        <SkillList src={checkMarkIcon} skill='Machine Learning'/>
-        <SkillList src={checkMarkIcon} skill='Deep Learning'/>
-        <SkillList src={checkMarkIcon} skill='NLP'/>
-        <SkillList src={checkMarkIcon} skill='LLM'/>
-    </div>
-    <hr/>
-    <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill='Hadoop'/>
-        <SkillList src={checkMarkIcon} skill='AWS'/>
-        <SkillList src={checkMarkIcon} skill='Spark'/>
-        <SkillList src={checkMarkIcon} skill='Kafka'/>
-    </div>
+    <section id='skills' className={styles.container}>
+      <h1 className={styles.sectionTitle}>Skills</h1>
+      <div className={styles.skillsGrid}>
+        {skillsData.map(skill => (
+          <div key={skill.title} className={styles.skillCard}>
+            <img src={skill.icon} alt={`${skill.title} icon`} className={styles.skillIcon} />
+            <h3 className={styles.skillTitle}>{skill.title}</h3>
+          </div>
+        ))}
+      </div>
     </section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;
