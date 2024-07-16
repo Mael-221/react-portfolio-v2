@@ -5,6 +5,8 @@ import boatCompet from '../../assets/boatcompet.png';
 import harmonyland from '../../assets/harmonyland.png';
 import outlier from '../../assets/outlier.png';
 import food from '../../assets/food.png';
+import reactPortfolio from '../../assets/react_project.png';
+import ocr from '../../assets/ocr.png';
 
 function Projects() {
   return (
@@ -38,6 +40,20 @@ function Projects() {
           title={"Restaurant Recommendation"}
           description={"Recommender system for restaurant recommendations based on user preferences and reviews."}
           technologies={"Python, Pandas, Scikit-learn"}
+        />
+        <ProjectCard 
+          src={reactPortfolio} 
+          link={"https://github.com/Mael-221/react-portfolio-v2"}
+          title={"React Portfolio"}
+          description={"Personal portfolio website built with React."}
+          technologies={"React, CSS Modules, Netlify"}
+        />
+        <ProjectCard 
+          src={ocr} 
+          link={"https://github.com/Mael-221/OCR"}
+          title={"OCR"}
+          description={"Optical Character Recognition (OCR) project in C."}
+          technologies={"C, Image Processing"}
         />
       </div>
     </section>
