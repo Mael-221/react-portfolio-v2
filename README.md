@@ -2,7 +2,7 @@
 
 Welcome to my portfolio! This website showcases my skills, projects, and journey as a Data Scientist.
 
-[Amine El Maghraoui](https://amine-el-maghraoui.netlify.app/path-to-your-image.png)
+[Amine El Maghraoui](https://amine-el-maghraoui.netlify.app/)
 
 ## Description
 
